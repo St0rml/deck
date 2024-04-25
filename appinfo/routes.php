@@ -53,6 +53,7 @@ return [
 		['name' => 'stack#update', 'url' => '/stacks/{stackId}', 'verb' => 'PUT'],
 		['name' => 'stack#reorder', 'url' => '/stacks/{stackId}/reorder', 'verb' => 'PUT'],
 		['name' => 'stack#delete', 'url' => '/stacks/{stackId}', 'verb' => 'DELETE'],
+		['name' => 'stack#copy', 'url' => '/stacks/{stackId}/copy', 'verb' => 'PUT'],
 		['name' => 'stack#deleted', 'url' => '/{boardId}/stacks/deleted', 'verb' => 'GET'],
 		['name' => 'stack#archived', 'url' => '/stacks/{boardId}/archived', 'verb' => 'GET'],
 
@@ -61,6 +62,7 @@ return [
 		['name' => 'card#create', 'url' => '/cards', 'verb' => 'POST'],
 		['name' => 'card#update', 'url' => '/cards/{cardId}', 'verb' => 'PUT'],
 		['name' => 'card#delete', 'url' => '/cards/{cardId}', 'verb' => 'DELETE'],
+		['name' => 'card#duplicate', 'url' => '/cards/{cardId}/duplicate', 'verb' => 'PUT'],
 		['name' => 'card#deleted', 'url' => '/{boardId}/cards/deleted', 'verb' => 'GET'],
 		['name' => 'card#rename', 'url' => '/cards/{cardId}/rename', 'verb' => 'PUT'],
 		['name' => 'card#reorder', 'url' => '/cards/{cardId}/reorder', 'verb' => 'PUT'],
@@ -111,6 +113,7 @@ return [
 		['name' => 'stack_api#create', 'url' => '/api/v{apiVersion}/boards/{boardId}/stacks', 'verb' => 'POST'],
 		['name' => 'stack_api#update', 'url' => '/api/v{apiVersion}/boards/{boardId}/stacks/{stackId}', 'verb' => 'PUT'],
 		['name' => 'stack_api#delete', 'url' => '/api/v{apiVersion}/boards/{boardId}/stacks/{stackId}', 'verb' => 'DELETE'],
+		['name' => 'stack_api#copy', 'url' => '/api/v{apiVersion}/boards/{boardId}/stacks/{stackId}/copy', 'verb' => 'PUT'],
 
 		['name' => 'card_api#get', 'url' => '/api/v{apiVersion}/boards/{boardId}/stacks/{stackId}/cards/{cardId}', 'verb' => 'GET'],
 		['name' => 'card_api#create', 'url' => '/api/v{apiVersion}/boards/{boardId}/stacks/{stackId}/cards', 'verb' => 'POST'],
@@ -121,6 +124,7 @@ return [
 		['name' => 'card_api#unassignUser', 'url' => '/api/v{apiVersion}/boards/{boardId}/stacks/{stackId}/cards/{cardId}/unassignUser', 'verb' => 'PUT'],
 		['name' => 'card_api#reorder', 'url' => '/api/v{apiVersion}/boards/{boardId}/stacks/{stackId}/cards/{cardId}/reorder', 'verb' => 'PUT'],
 		['name' => 'card_api#delete', 'url' => '/api/v{apiVersion}/boards/{boardId}/stacks/{stackId}/cards/{cardId}', 'verb' => 'DELETE'],
+		['name' => 'card_api#duplicate', 'url' => '/api/v{apiVersion}/boards/{boardId}/stacks/{stackId}/cards/{cardId}/duplicate', 'verb' => 'PUT'],
 
 		['name' => 'card_api#findAllWithDue', 'url' => '/api/v{apiVersion}/dashboard/due', 'verb' => 'GET'],
 
