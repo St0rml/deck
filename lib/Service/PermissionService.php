@@ -1,24 +1,8 @@
 <?php
+
 /**
- * @copyright Copyright (c) 2016 Julius Härtl <jus@bitgrid.net>
- *
- * @author Julius Härtl <jus@bitgrid.net>
- *
- * @license GNU AGPL version 3 or any later version
- *
- *  This program is free software: you can redistribute it and/or modify
- *  it under the terms of the GNU Affero General Public License as
- *  published by the Free Software Foundation, either version 3 of the
- *  License, or (at your option) any later version.
- *
- *  This program is distributed in the hope that it will be useful,
- *  but WITHOUT ANY WARRANTY; without even the implied warranty of
- *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- *  GNU Affero General Public License for more details.
- *
- *  You should have received a copy of the GNU Affero General Public License
- *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
- *
+ * SPDX-FileCopyrightText: 2016 Nextcloud GmbH and Nextcloud contributors
+ * SPDX-License-Identifier: AGPL-3.0-or-later
  */
 
 namespace OCA\Deck\Service;
@@ -37,57 +21,27 @@ use OCP\AppFramework\Db\MultipleObjectsReturnedException;
 use OCP\Cache\CappedMemoryCache;
 use OCP\IConfig;
 use OCP\IGroupManager;
-use OCP\ILogger;
 use OCP\IUserManager;
 use OCP\Share\IManager;
+use Psr\Log\LoggerInterface;
 
 class PermissionService {
-
-	/** @var CirclesService */
-	private $circlesService;
-	/** @var BoardMapper */
-	private $boardMapper;
-	/** @var AclMapper */
-	private $aclMapper;
-	/** @var ILogger */
-	private $logger;
-	/** @var IUserManager */
-	private $userManager;
-	/** @var IGroupManager */
-	private $groupManager;
-	/** @var IConfig */
-	private $config;
-	/** @var IManager */
-	private $shareManager;
-	/** @var string */
-	private $userId;
-	/** @var array */
-	private $users = [];
+	private array $users = [];
 
 	private CappedMemoryCache $boardCache;
 	private CappedMemoryCache $permissionCache;
 
 	public function __construct(
-		ILogger $logger,
-		CirclesService $circlesService,
-		AclMapper $aclMapper,
-		BoardMapper $boardMapper,
-		IUserManager $userManager,
-		IGroupManager $groupManager,
-		IManager $shareManager,
-		IConfig $config,
-		$userId
+		private LoggerInterface $logger,
+		private CirclesService $circlesService,
+		private AclMapper $aclMapper,
+		private BoardMapper $boardMapper,
+		private IUserManager $userManager,
+		private IGroupManager $groupManager,
+		private IManager $shareManager,
+		private IConfig $config,
+		private ?string $userId
 	) {
-		$this->circlesService = $circlesService;
-		$this->aclMapper = $aclMapper;
-		$this->boardMapper = $boardMapper;
-		$this->logger = $logger;
-		$this->userManager = $userManager;
-		$this->groupManager = $groupManager;
-		$this->shareManager = $shareManager;
-		$this->config = $config;
-		$this->userId = $userId;
-
 		$this->boardCache = new CappedMemoryCache();
 		$this->permissionCache = new CappedMemoryCache();
 	}
@@ -95,10 +49,9 @@ class PermissionService {
 	/**
 	 * Get current user permissions for a board by id
 	 *
-	 * @param $boardId
 	 * @return bool|array
 	 */
-	public function getPermissions($boardId, ?string $userId = null) {
+	public function getPermissions(int $boardId, ?string $userId = null) {
 		if ($userId === null) {
 			$userId = $this->userId;
 		}
@@ -116,7 +69,7 @@ class PermissionService {
 			$owner = false;
 			$acls = [];
 		}
-		
+
 		$permissions = [
 			Acl::PERMISSION_READ => $owner || $this->userCan($acls, Acl::PERMISSION_READ, $userId),
 			Acl::PERMISSION_EDIT => $owner || $this->userCan($acls, Acl::PERMISSION_EDIT, $userId),
@@ -150,11 +103,10 @@ class PermissionService {
 	/**
 	 * check permissions for replacing dark magic middleware
 	 *
-	 * @param numeric $id
 	 * @throws NoPermissionException
 	 */
 	public function checkPermission(?IPermissionMapper $mapper, $id, int $permission, $userId = null, bool $allowDeletedCard = false): bool {
-		$boardId = $id;
+		$boardId = (int)$id;
 		if ($mapper instanceof IPermissionMapper && !($mapper instanceof BoardMapper)) {
 			$boardId = $mapper->findBoardId($id);
 		}
@@ -167,7 +119,7 @@ class PermissionService {
 		if ($permissions[$permission] === true) {
 
 			if (!$allowDeletedCard && $mapper instanceof CardMapper) {
-				$card = $mapper->find($id);
+				$card = $mapper->find((int)$id, false);
 				if ($card->getDeletedAt() > 0) {
 					throw new NoPermissionException('Card is deleted');
 				}

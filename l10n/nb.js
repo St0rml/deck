@@ -149,7 +149,7 @@ OC.L10N.register(
     "Filter by tag" : "Filtrer på knagg",
     "Filter by assigned user" : "Filtrer på tildelt bruker",
     "Unassigned" : "Ikke tildelt",
-    "Filter by completed" : "Filtrer etter fullført",
+    "Filter by status" : "Filtrer etter status",
     "Open and completed" : "Åpen og fullført",
     "Open" : "Åpne",
     "Completed" : "Ferdig",
@@ -256,8 +256,9 @@ OC.L10N.register(
     "Add due date" : "Legg til forfallsdato",
     "Choose a date" : "Velg en dato",
     "Remove due date" : "Fjern forfallsdato",
+    "Mark as done" : "Marker som fullført",
     "Due at:" : "Forfaller den:",
-    "Not completed" : "Ikke ferdigstilt",
+    "Not done" : "Ikke fullført",
     "Unarchive card" : "Hent kort fra arkiv",
     "Archive card" : "Arkiver kort",
     "Select Date" : "Velg dato",
@@ -277,7 +278,6 @@ OC.L10N.register(
     "Assign to me" : "Tildel meg",
     "Unassign myself" : "Fjern meg fra tildeling",
     "Mark as not done" : "Marker som ikke ferdig",
-    "Mark as done" : "Marker som fullført",
     "Delete card" : "Slett kort",
     "Card deleted" : "Kort slettet",
     "seconds ago" : "sekunder siden",
@@ -384,6 +384,8 @@ OC.L10N.register(
     "Next month" : "Neste måned",
     "List is empty" : "Stabel er tom",
     "Limit deck usage of groups" : "Begrens stokk-bruk til grupper",
-    "Limiting Deck will block users not part of those groups from creating their own boards. Users will still be able to work on boards that have been shared with them." : "Begrensning av tavler vil hindre tilgang til de brukere som ikke er medlem av en gruppe fra å lage egne tavler. Bruker kan arbeide på de tavler som er delt med dem."
+    "Limiting Deck will block users not part of those groups from creating their own boards. Users will still be able to work on boards that have been shared with them." : "Begrensning av tavler vil hindre tilgang til de brukere som ikke er medlem av en gruppe fra å lage egne tavler. Bruker kan arbeide på de tavler som er delt med dem.",
+    "Not completed" : "Ikke ferdigstilt",
+    "Filter by completed" : "Filtrer etter fullført"
 },
 "nplurals=2; plural=(n != 1);");

@@ -1,6 +1,10 @@
+<!--
+  - SPDX-FileCopyrightText: 2016 Nextcloud GmbH and Nextcloud contributors
+  - SPDX-License-Identifier: AGPL-3.0-or-later
+-->
 # Deck
 
-[![Build Status](https://travis-ci.org/nextcloud/deck.svg?branch=main)](https://travis-ci.org/nextcloud/deck) [![CodeCov](https://codecov.io/github/nextcloud/deck/coverage.svg?branch=main)](https://codecov.io/github/nextcloud/deck) [![Codacy Badge](https://api.codacy.com/project/badge/Grade/e403f723f42a4abd93b2cfe36cbd7eee)](https://www.codacy.com/app/juliushaertl/deck?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=nextcloud/deck&amp;utm_campaign=Badge_Grade) [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/nextcloud/deck/badges/quality-score.png?b=main)](https://scrutinizer-ci.com/g/nextcloud/deck/?branch=main) [![#nextcloud-deck](https://img.shields.io/badge/IRC-%23nextcloud--deck%20on%20freenode-blue.svg)](https://webchat.freenode.net/?channels=nextcloud-deck)
+[![Build Status](https://travis-ci.org/nextcloud/deck.svg?branch=main)](https://travis-ci.org/nextcloud/deck) [![CodeCov](https://codecov.io/github/nextcloud/deck/coverage.svg?branch=main)](https://codecov.io/github/nextcloud/deck) [![Codacy Badge](https://api.codacy.com/project/badge/Grade/e403f723f42a4abd93b2cfe36cbd7eee)](https://www.codacy.com/app/juliushaertl/deck?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=nextcloud/deck&amp;utm_campaign=Badge_Grade) [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/nextcloud/deck/badges/quality-score.png?b=main)](https://scrutinizer-ci.com/g/nextcloud/deck/?branch=main) [![#nextcloud-deck](https://img.shields.io/badge/IRC-%23nextcloud--deck%20on%20freenode-blue.svg)](https://webchat.freenode.net/?channels=nextcloud-deck) [![REUSE status](https://api.reuse.software/badge/github.com/nextcloud/deck)](https://api.reuse.software/info/github.com/nextcloud/deck)
 
 
 Deck is a kanban style organization tool aimed at personal planning and project organization for teams integrated with Nextcloud.
@@ -20,6 +24,7 @@ Deck is a kanban style organization tool aimed at personal planning and project 
 ### Mobile apps
 
 - [Nextcloud Deck app for Android](https://github.com/stefan-niedermann/nextcloud-deck) - It is available in [F-Droid](https://f-droid.org/de/packages/it.niedermann.nextcloud.deck/) and the [Google Play Store](https://play.google.com/store/apps/details?id=it.niedermann.nextcloud.deck.play)
+- [Nextcloud Deck app for iOS](https://github.com/StCyr/deck-react-native) - It is available in [Apple App store](https://apps.apple.com/ml/app/nextcloud-deck/id1570892788)
 - [deck NG for Android and iOS](https://github.com/meltzow/deck-ng) - It is available in [Google Play Store](https://play.google.com/store/apps/details?id=net.meltzow.deckng) and [Apple App Store](https://apps.apple.com/us/app/deck-ng/id6443334702)
 
 ### 3rd-Party Integrations

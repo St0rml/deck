@@ -149,7 +149,7 @@ OC.L10N.register(
     "Filter by tag" : "Filtrera efter tagg",
     "Filter by assigned user" : "Filtrera efter tilldelad användare",
     "Unassigned" : "Ej tilldelad",
-    "Filter by completed" : "Filtrera efter slutfört",
+    "Filter by status" : "Filtrera efter status",
     "Open and completed" : "Öppen och klar",
     "Open" : "Öppna",
     "Completed" : "Slutförd",
@@ -256,8 +256,9 @@ OC.L10N.register(
     "Add due date" : "Lägg till förfallodatum",
     "Choose a date" : "Välj ett datum",
     "Remove due date" : "Ta bort slutdatum",
+    "Mark as done" : "Markera som klar",
     "Due at:" : "Förfaller:",
-    "Not completed" : "Ej slutförd",
+    "Not done" : "Inte klar",
     "Unarchive card" : "Avarkivera kort",
     "Archive card" : "Arkivera kort",
     "Select Date" : "Välj datum",
@@ -277,7 +278,6 @@ OC.L10N.register(
     "Assign to me" : "Tilldela till mig",
     "Unassign myself" : "Ta bort från mig själv",
     "Mark as not done" : "Markera som ej klar",
-    "Mark as done" : "Markera som klar",
     "Delete card" : "Ta bort kort",
     "Card deleted" : "Kortet har raderats",
     "seconds ago" : "sekunder sedan",
@@ -384,6 +384,8 @@ OC.L10N.register(
     "Next month" : "Nästa månad",
     "List is empty" : "Listan är tom",
     "Limit deck usage of groups" : "Begränsa användningen av grupper",
-    "Limiting Deck will block users not part of those groups from creating their own boards. Users will still be able to work on boards that have been shared with them." : "Begränsning av Deck blockerar användare som inte ingår i dessa grupper från att skapa egna tavlor. Användare kan dock fortfarande integrera med tavlor som har delats med dem."
+    "Limiting Deck will block users not part of those groups from creating their own boards. Users will still be able to work on boards that have been shared with them." : "Begränsning av Deck blockerar användare som inte ingår i dessa grupper från att skapa egna tavlor. Användare kan dock fortfarande integrera med tavlor som har delats med dem.",
+    "Not completed" : "Ej slutförd",
+    "Filter by completed" : "Filtrera efter slutfört"
 },
 "nplurals=2; plural=(n != 1);");

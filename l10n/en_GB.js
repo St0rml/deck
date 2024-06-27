@@ -149,7 +149,7 @@ OC.L10N.register(
     "Filter by tag" : "Filter by tag",
     "Filter by assigned user" : "Filter by assigned user",
     "Unassigned" : "Unassigned",
-    "Filter by completed" : "Filter by completed",
+    "Filter by status" : "Filter by status",
     "Open and completed" : "Open and completed",
     "Open" : "Open",
     "Completed" : "Completed",
@@ -256,8 +256,9 @@ OC.L10N.register(
     "Add due date" : "Add due date",
     "Choose a date" : "Choose a date",
     "Remove due date" : "Remove due date",
+    "Mark as done" : "Mark as done",
     "Due at:" : "Due at:",
-    "Not completed" : "Not completed",
+    "Not done" : "Not done",
     "Unarchive card" : "Unarchive card",
     "Archive card" : "Archive card",
     "Select Date" : "Select Date",
@@ -277,7 +278,6 @@ OC.L10N.register(
     "Assign to me" : "Assign to me",
     "Unassign myself" : "Unassign myself",
     "Mark as not done" : "Mark as not done",
-    "Mark as done" : "Mark as done",
     "Delete card" : "Delete card",
     "Card deleted" : "Card deleted",
     "seconds ago" : "seconds ago",
@@ -384,6 +384,8 @@ OC.L10N.register(
     "Next month" : "Next month",
     "List is empty" : "List is empty",
     "Limit deck usage of groups" : "Limit deck usage of groups",
-    "Limiting Deck will block users not part of those groups from creating their own boards. Users will still be able to work on boards that have been shared with them." : "Limiting Deck will block users not part of those groups from creating their own boards. Users will still be able to work on boards that have been shared with them."
+    "Limiting Deck will block users not part of those groups from creating their own boards. Users will still be able to work on boards that have been shared with them." : "Limiting Deck will block users not part of those groups from creating their own boards. Users will still be able to work on boards that have been shared with them.",
+    "Not completed" : "Not completed",
+    "Filter by completed" : "Filter by completed"
 },
 "nplurals=2; plural=(n != 1);");

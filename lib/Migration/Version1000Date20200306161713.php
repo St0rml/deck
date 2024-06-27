@@ -1,7 +1,10 @@
 <?php
 
 declare(strict_types=1);
-
+/**
+ * SPDX-FileCopyrightText: 2020 Nextcloud GmbH and Nextcloud contributors
+ * SPDX-License-Identifier: AGPL-3.0-or-later
+ */
 namespace OCA\Deck\Migration;
 
 use Closure;
@@ -268,7 +271,7 @@ class Version1000Date20200306161713 extends SimpleMigrationStep {
 			]);
 			$table->setPrimaryKey(['id']);
 			$table->addIndex(['participant'], 'deck_assigned_users_idx_p');
-			$table->addIndex(['card_id'], 'deck_assigned_users_idx_c');
+			//$table->addIndex(['card_id'], 'deck_assigned_users_idx_c');
 		}
 
 		if (!$schema->hasTable('deck_board_acl')) {
@@ -304,7 +307,7 @@ class Version1000Date20200306161713 extends SimpleMigrationStep {
 			]);
 			$table->setPrimaryKey(['id']);
 			$table->addUniqueIndex(['board_id', 'type', 'participant'], 'deck_board_acl_uq_i');
-			$table->addIndex(['board_id'], 'deck_board_acl_idx_i');
+			//$table->addIndex(['board_id'], 'deck_board_acl_idx_i');
 		}
 		return $schema;
 	}

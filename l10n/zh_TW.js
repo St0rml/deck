@@ -149,7 +149,7 @@ OC.L10N.register(
     "Filter by tag" : "按標籤過濾",
     "Filter by assigned user" : "按被分配的使用者過濾",
     "Unassigned" : "未分配",
-    "Filter by completed" : "按已完成篩選",
+    "Filter by status" : "以狀態過濾",
     "Open and completed" : "開啟並完成",
     "Open" : "開啟",
     "Completed" : "已完成",
@@ -256,8 +256,9 @@ OC.L10N.register(
     "Add due date" : "新增到期日",
     "Choose a date" : "選擇日期",
     "Remove due date" : "移除到期日",
+    "Mark as done" : "標記為完成",
     "Due at:" : "到期於：",
-    "Not completed" : "未完成",
+    "Not done" : "未完成",
     "Unarchive card" : "解除封存卡片",
     "Archive card" : "封存卡片",
     "Select Date" : "選擇日期",
@@ -277,7 +278,6 @@ OC.L10N.register(
     "Assign to me" : "分配給我",
     "Unassign myself" : "取消分配給我",
     "Mark as not done" : "標記為未完成",
-    "Mark as done" : "標記為完成",
     "Delete card" : "刪除卡片",
     "Card deleted" : "卡片已刪除",
     "seconds ago" : "幾秒前",
@@ -384,6 +384,8 @@ OC.L10N.register(
     "Next month" : "下個月",
     "List is empty" : "清單為空",
     "Limit deck usage of groups" : "限制群組的 Deck 使用",
-    "Limiting Deck will block users not part of those groups from creating their own boards. Users will still be able to work on boards that have been shared with them." : "限制 Deck 將會阻止不屬於這些群組的使用者建立自己的佈告欄。使用者仍然可以在與他們分享的佈告欄上工作。"
+    "Limiting Deck will block users not part of those groups from creating their own boards. Users will still be able to work on boards that have been shared with them." : "限制 Deck 將會阻止不屬於這些群組的使用者建立自己的佈告欄。使用者仍然可以在與他們分享的佈告欄上工作。",
+    "Not completed" : "未完成",
+    "Filter by completed" : "按已完成篩選"
 },
 "nplurals=1; plural=0;");

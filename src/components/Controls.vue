@@ -1,23 +1,6 @@
 <!--
-* @copyright Copyright (c) 2018 Michael Weimann <mail@michael-weimann.eu>
-*
-* @author Michael Weimann <mail@michael-weimann.eu>
-*
-* @license GNU AGPL version 3 or any later version
-*
-* This program is free software: you can redistribute it and/or modify
-* it under the terms of the GNU Affero General Public License as
-* published by the Free Software Foundation, either version 3 of the
-* License, or (at your option) any later version.
-*
-* This program is distributed in the hope that it will be useful,
-* but WITHOUT ANY WARRANTY; without even the implied warranty of
-* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-* GNU Affero General Public License for more details.
-*
-* You should have received a copy of the GNU Affero General Public License
-* along with this program. If not, see <http://www.gnu.org/licenses/>.
-*
+  - SPDX-FileCopyrightText: 2018 Nextcloud GmbH and Nextcloud contributors
+  - SPDX-License-Identifier: AGPL-3.0-or-later
 -->
 
 <template>
@@ -138,7 +121,7 @@
 								<label :for="user.uid"><NcAvatar :user="user.uid" :size="24" :disable-menu="true" /> {{ user.displayname }}</label>
 							</div>
 
-							<h3>{{ t('deck', 'Filter by completed') }}</h3>
+							<h3>{{ t('deck', 'Filter by status') }}</h3>
 							<div class="filter--item">
 								<input id="filter-option-both"
 									v-model="filter.completed"

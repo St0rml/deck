@@ -1,24 +1,7 @@
 <!--
-  - @copyright Copyright (c) 2018 John Molakvoæ <skjnldsv@protonmail.com>
-  -
-  - @author John Molakvoæ <skjnldsv@protonmail.com>
-  -
-  - @license GNU AGPL version 3 or any later version
-  -
-  - This program is free software: you can redistribute it and/or modify
-  - it under the terms of the GNU Affero General Public License as
-  - published by the Free Software Foundation, either version 3 of the
-  - License, or (at your option) any later version.
-  -
-  - This program is distributed in the hope that it will be useful,
-  - but WITHOUT ANY WARRANTY; without even the implied warranty of
-  - MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
-  - GNU Affero General Public License for more details.
-  -
-  - You should have received a copy of the GNU Affero General Public License
-  - along with this program. If not, see <http://www.gnu.org/licenses/>.
-  -
-  -->
+  - SPDX-FileCopyrightText: 2018 Nextcloud GmbH and Nextcloud contributors
+  - SPDX-License-Identifier: AGPL-3.0-or-later
+-->
 <template>
 	<NcAppNavigationItem v-if="!editing"
 		:name="!deleted ? board.title : undoText"
@@ -46,7 +29,7 @@
 					@click="actionEdit">
 					{{ t('deck', 'Edit board') }}
 				</NcActionButton>
-				<NcActionButton v-if="canManage && !board.archived"
+				<NcActionButton v-if="canCreate && !board.archived"
 					:close-after-click="true"
 					@click="actionClone">
 					<template #icon>
@@ -148,6 +131,9 @@ import ClickOutside from 'vue-click-outside'
 import ArchiveIcon from 'vue-material-design-icons/Archive.vue'
 import CloneIcon from 'vue-material-design-icons/ContentDuplicate.vue'
 import AccountIcon from 'vue-material-design-icons/Account.vue'
+import { loadState } from '@nextcloud/initial-state'
+
+const canCreateState = loadState('deck', 'canCreate')
 
 export default {
 	name: 'AppNavigationBoard',
@@ -185,6 +171,7 @@ export default {
 			editColor: '',
 			isDueSubmenuActive: false,
 			updateDueSetting: null,
+			canCreate: canCreateState,
 		}
 	},
 	computed: {
@@ -253,6 +240,9 @@ export default {
 			try {
 				const newBoard = await this.$store.dispatch('cloneBoard', this.board)
 				this.loading = false
+				if (newBoard instanceof Error) {
+					throw newBoard
+				}
 				this.$router.push({ name: 'board', params: { id: newBoard.id } })
 			} catch (e) {
 				OC.Notification.showTemporary(t('deck', 'An error occurred'))

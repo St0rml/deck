@@ -254,12 +254,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/nextcloud-deps/ocp.git",
-                "reference": "36edf19f7eb41155c1168e6993ad8760ab18a1df"
+                "reference": "bdeabb2fbb4691ac3d72dc27f56dd52aa6c61725"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nextcloud-deps/ocp/zipball/36edf19f7eb41155c1168e6993ad8760ab18a1df",
-                "reference": "36edf19f7eb41155c1168e6993ad8760ab18a1df",
+                "url": "https://api.github.com/repos/nextcloud-deps/ocp/zipball/bdeabb2fbb4691ac3d72dc27f56dd52aa6c61725",
+                "reference": "bdeabb2fbb4691ac3d72dc27f56dd52aa6c61725",
                 "shasum": ""
             },
             "require": {
@@ -291,7 +291,7 @@
                 "issues": "https://github.com/nextcloud-deps/ocp/issues",
                 "source": "https://github.com/nextcloud-deps/ocp/tree/master"
             },
-            "time": "2024-04-10T00:32:39+00:00"
+            "time": "2024-06-18T00:36:38+00:00"
         },
         {
             "name": "nikic/php-parser",
@@ -945,16 +945,16 @@
         },
         {
             "name": "psalm/phar",
-            "version": "5.23.1",
+            "version": "5.25.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/psalm/phar.git",
-                "reference": "07bb50acefdaf7b663087186f86d47542a9b1622"
+                "reference": "d42708449bd2d99ec6509924332fd94263974b20"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/psalm/phar/zipball/07bb50acefdaf7b663087186f86d47542a9b1622",
-                "reference": "07bb50acefdaf7b663087186f86d47542a9b1622",
+                "url": "https://api.github.com/repos/psalm/phar/zipball/d42708449bd2d99ec6509924332fd94263974b20",
+                "reference": "d42708449bd2d99ec6509924332fd94263974b20",
                 "shasum": ""
             },
             "require": {
@@ -974,9 +974,9 @@
             "description": "Composer-based Psalm Phar",
             "support": {
                 "issues": "https://github.com/psalm/phar/issues",
-                "source": "https://github.com/psalm/phar/tree/5.23.1"
+                "source": "https://github.com/psalm/phar/tree/5.25.0"
             },
-            "time": "2024-03-11T20:43:33+00:00"
+            "time": "2024-06-19T20:02:02+00:00"
         },
         {
             "name": "psr/clock",

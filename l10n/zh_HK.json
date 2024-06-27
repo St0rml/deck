@@ -109,7 +109,7 @@
     "The file was only partially uploaded" : "檔案僅部分上傳",
     "No file was uploaded" : "沒有檔案被上傳",
     "Missing a temporary folder" : "找不到暫存資料夾",
-    "Could not write file to disk" : "寫入硬碟失敗",
+    "Could not write file to disk" : "無法將檔案寫入磁碟",
     "A PHP extension stopped the file upload" : "某個 PHP 擴充功能終止檔案的上傳",
     "No file uploaded or file size exceeds maximum of %s" : "沒有上傳檔案或檔案大小超過 %s 的最大值",
     "This comment has more than %s characters.\nAdded as an attachment to the card with name %s.\nAccessible on URL: %s." : "此評論超過%s個字符。\n作為附件添加到名稱為 %s 的卡片上。\n可於此 URL  存取：%s。",
@@ -147,7 +147,7 @@
     "Filter by tag" : "以標籤過濾",
     "Filter by assigned user" : "以指派用戶過濾",
     "Unassigned" : "未指派",
-    "Filter by completed" : "按已完成篩選",
+    "Filter by status" : "以狀態過濾",
     "Open and completed" : "開啟並完成",
     "Open" : "開啟",
     "Completed" : "已完成",
@@ -254,8 +254,9 @@
     "Add due date" : "添加到期日",
     "Choose a date" : "選擇日期",
     "Remove due date" : "移除到期日",
+    "Mark as done" : "標記為完成",
     "Due at:" : "到期日：",
-    "Not completed" : "未完成",
+    "Not done" : "未完成",
     "Unarchive card" : "取消對卡片的封存",
     "Archive card" : "封存卡片",
     "Select Date" : "選擇日期",
@@ -275,7 +276,6 @@
     "Assign to me" : "指派給我",
     "Unassign myself" : "自己解除指派",
     "Mark as not done" : "標記為未完成",
-    "Mark as done" : "標記為完成",
     "Delete card" : "刪除卡片",
     "Card deleted" : "卡片被刪除",
     "seconds ago" : "幾秒前",
@@ -382,6 +382,8 @@
     "Next month" : "下個月",
     "List is empty" : "列表是空的",
     "Limit deck usage of groups" : "限制群組使用 Deck",
-    "Limiting Deck will block users not part of those groups from creating their own boards. Users will still be able to work on boards that have been shared with them." : "限制 Deck 將阻止不屬於這些群組的用戶創建自己的面板。用戶仍然可以在與他們的面板上工作。"
+    "Limiting Deck will block users not part of those groups from creating their own boards. Users will still be able to work on boards that have been shared with them." : "限制 Deck 將阻止不屬於這些群組的用戶創建自己的面板。用戶仍然可以在與他們的面板上工作。",
+    "Not completed" : "未完成",
+    "Filter by completed" : "按已完成篩選"
 },"pluralForm" :"nplurals=1; plural=0;"
 }
